@@ -1,22 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
+// Brute Force
 func twoSum(nums []int, target int) []int {
-	arr := []int{}
-	for i := 0; i < len(nums); i++ {
-		for j := i; j < len(nums); j++ {
-			res := nums[i] + nums[j]
-			if res == target && i != j {
-				arr = append(arr, i)
-				arr = append(arr, j)
-
-				return arr
+	for i, left := range nums {
+		for j, right := range nums {
+			if left+right == target && i != j {
+				return []int{i, j}
 			}
 		}
 	}
 
-	return arr
+	return nil
 }
 
 func main() {
