@@ -4,6 +4,7 @@ import "fmt"
 
 func twoSum(nums []int, target int) []int {
 	arr := []int{}
+
 	for i := 0; i < len(nums); i++ {
 		for j := i; j < len(nums); j++ {
 			res := nums[i] + nums[j]
