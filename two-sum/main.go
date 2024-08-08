@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-// Brute Force...
 func twoSumBruteForce(nums []int, target int) []int {
 	for i, left := range nums {
 		for j, right := range nums {
