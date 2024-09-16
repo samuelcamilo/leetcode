@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type LRUCache struct {
 	Capacity int
@@ -22,5 +24,6 @@ func (l *LRUCache) Put(key, value int) {
 }
 
 func main() {
-	fmt.Println("Hello World...")
+	c := Constructor(5)
+	fmt.Printf("cache lenght: %d\n", c.Capacity)
 }
